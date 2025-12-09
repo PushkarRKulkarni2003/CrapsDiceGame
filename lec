@@ -1,0 +1,10 @@
+lec -lpgxl -nogui
+read library /home/pgvlsi18/Digital/lib/slow.lib -liberty
+read design /home/pgvlsi18/Digital/fsm_fpga.v -verilog -golden
+read design /home/pgvlsi18/Digital/a1_netlist.v -verilog -revised
+set system mode lec
+add compared points -all
+compare report verification
+tclmode
+report_unmapped_points
+set_gui
